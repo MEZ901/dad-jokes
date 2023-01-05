@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    require "../app/core/init.php";
+
+    $app = new app;
+    $app->loadController();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
-    <title>Document</title>
+    <title>dad jokes</title>
 </head>
-<body class="bg-slate-900">
+<body class="">
     <div>
         <section class="bg-white dark:bg-gray-900">
             <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
@@ -35,6 +44,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
-    <script src="../view/main.js"></script>
+    <script src="../app/views/main.js"></script>
 </body>
 </html>
