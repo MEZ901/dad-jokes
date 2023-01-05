@@ -22,6 +22,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="<?= ROOT ?>/assets/js/script.js"></script>
 </body>
 </html>

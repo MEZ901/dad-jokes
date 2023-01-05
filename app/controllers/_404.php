@@ -6,3 +6,4 @@ class _404 extends Controller {
     }
 }
 
+?>
