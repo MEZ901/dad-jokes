@@ -3,8 +3,8 @@
 class Home extends Controller {
     public function index(){
         $joke = new Joke;
-        $arr['joke'] = "I asked my dog what's two minus two. He said nothing.";
-        $result = $joke->update(3,$arr);
+        $arr['joke'] = "What did Baby Corn say to Mama Corn? Where's Pop Corn?";
+        // $result = $joke->insert($arr);
         show($result);
         $this->view('home');
     }

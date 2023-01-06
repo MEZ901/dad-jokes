@@ -10,12 +10,12 @@ class app {
     } 
     public function loadController(){
         $URL = $this->splitURL();
-        $filename = "../app/controllers/" . ucfirst($URL[0]) . ".php";
+        $filename = "../app/controllers/" . ucfirst($URL[0]) . ".controller.php";
         if(file_exists($filename)){
             require $filename;
             $this->controller = ucfirst($URL[0]);
         }else{
-            $filename = "../app/controllers/_404.php";
+            $filename = "../app/controllers/_404.controller.php";
             require $filename;
             $this->controller = "_404";
         }
