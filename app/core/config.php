@@ -11,10 +11,13 @@ if($_SERVER['SERVER_NAME'] == 'localhost'){
 }else{
     /** database config **/
     define('DBNAME', 'dad-jokes');
-    define('HOST', 'localhost');
+    define('HOST', 'host');
     define('USER', 'root');
-    define('PASSWORD', '');
+    define('PASSWORD', 'root');
     
     define('ROOT', 'https://www.yourwebsite.com');
 }
+
+/** debug mode **/
+define('DEBUG', true);
 ?>
