@@ -1,9 +1,8 @@
 <?php
 
-class Model  {
+trait Model  {
     use Database;
 
-    protected $table = 'jokes';
     protected $limit = 10;
     protected $offset = 0;
 

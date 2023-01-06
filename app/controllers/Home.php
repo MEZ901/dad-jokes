@@ -2,9 +2,9 @@
 
 class Home extends Controller {
     public function index(){
-        $model = new Model;
-        $arr['joke'] = 'Where do fruits go on vacation? Pear-is!';
-        // $result = $model->update(1, $arr);
+        $joke = new Joke;
+        $arr['joke'] = "I asked my dog what's two minus two. He said nothing.";
+        $result = $joke->update(3,$arr);
         show($result);
         $this->view('home');
     }
