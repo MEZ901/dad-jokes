@@ -10,7 +10,6 @@ class Model  {
     public function where($data, $data_not = []){
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
-        $str = "";
         $query = "select * from $this->table where ";
 
         foreach($keys as $key){
@@ -31,7 +30,6 @@ class Model  {
     public function first($data, $data_not = []){
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
-        $str = "";
         $query = "select * from $this->table where ";
 
         foreach($keys as $key){
@@ -62,8 +60,12 @@ class Model  {
 
     }
 
-    public function delete($id){
+    public function delete($id, $id_column = 'id'){
 
+        $data[$id_column] = $id;
+        $query = "delete from $this->table where $id_column = :$id_column ";
+        $this->query($query, $data);
+        return false;
     }
 }
 
