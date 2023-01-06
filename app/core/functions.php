@@ -6,4 +6,8 @@ function show($stuff){
     echo "</pre>";
 }
 
+function esc($str){
+    return htmlspecialchars($str);
+}
+
 ?>
