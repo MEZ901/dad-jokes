@@ -5,8 +5,21 @@ class Joke {
 
     protected $table = 'jokes';
     protected $allowedColumns = [
-        'jokes'
+        'joke'
     ];
+
+    public function validate($data){
+        $this->errors = [];
+
+        if(empty($data['joke'])){
+            $this->errors['joke'] = "Joke can not be empty";
+        }
+
+        if(empty($this->errors)){
+            return true;
+        }
+        return false;
+    }
 }
 
 ?>
