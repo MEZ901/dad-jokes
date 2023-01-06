@@ -56,6 +56,13 @@ trait Model  {
     }
 
     public function insert($data){
+        if(!empty($this->allowedColumns)){
+            foreach($data as $key => $value){
+                if(!in_array($key, $this->allowedColumns)){
+                    unset($data[$key]);
+                }
+            }
+        }
         $keys = array_keys($data);
         $query = "insert into $this->table (". implode(",", $keys) .") values (:". implode(",:", $keys) .")";
         $this->query($query, $data);
@@ -63,6 +70,13 @@ trait Model  {
     }
 
     public function update($id, $data, $id_column = 'id'){
+        if(!empty($this->allowedColumns)){
+            foreach($data as $key => $value){
+                if(!in_array($key, $this->allowedColumns)){
+                    unset($data[$key]);
+                }
+            }
+        }
         $keys = array_keys($data);
         $query = "update $this->table set ";
 
