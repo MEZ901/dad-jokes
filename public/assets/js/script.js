@@ -1,3 +1,4 @@
+getJoke();
 async function getJoke() {
     const response = await fetch("https://icanhazdadjoke.com/", {
       headers: {
@@ -10,4 +11,7 @@ async function getJoke() {
     const jokeParagraph = document.getElementById("random_jokes");
     jokeParagraph.textContent = joke;
 }
-getJoke()
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById('addJoke').click();
+});
