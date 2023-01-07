@@ -15,3 +15,7 @@ async function getJoke() {
 document.addEventListener("DOMContentLoaded", function(event) {
   document.getElementById('addJoke').click();
 });
+
+function getId(id){
+  document.getElementById('id').value=`${id}`;
+}
