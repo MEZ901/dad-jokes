@@ -15,4 +15,25 @@ function redirect($path){
     die;
 }
 
+function insertIntoCookies($joke) {
+    $currentJokes = $_COOKIE["jokes"];
+    
+    if ($currentJokes == "") {
+      setcookie("jokes", $joke);
+    } else {
+      $currentJokes .= "|" . $joke;
+      setcookie("jokes", $currentJokes);
+    }
+}
+
+function existCookies($joke) {
+    $currentJokes = $_COOKIE["jokes"];
+    
+    if (preg_match("/\b" . $joke . "\b/i", $currentJokes)) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
 ?>
