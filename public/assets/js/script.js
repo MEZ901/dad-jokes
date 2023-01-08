@@ -17,6 +17,7 @@ if(document.getElementById("random_jokes") != null){
 
 document.addEventListener("DOMContentLoaded", function(event) {
   document.getElementById('addJoke').click();
+  document.getElementById('deleteButton').click();
 });
 
 function getId(id){
